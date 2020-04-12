@@ -1,0 +1,5 @@
+main: papertools.App
+name: Papertools
+author: wouter173
+version: 0.1
+api-version: 1.13
