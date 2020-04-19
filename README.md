@@ -3,9 +3,10 @@
 ## Features
 - [x] disable player join/quit message
 - [x] config reload
+- [x] spawnjoin
 
 ## TODO
-- [ ] /<server> command
+- [ ]
 
 ## API
 - GUI
