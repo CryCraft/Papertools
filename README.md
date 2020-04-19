@@ -1,13 +1,34 @@
 # Papertools
 
+## Features
+- [x] disable player join/quit message
+- [x] config reload
+
 ## TODO
-- [ ] disable join/leave messages
 - [ ] /<server> command
-- [ ] config
 
 ## API
 - GUI
-- Utils (SendPlayerTo)
+- Utils: SendPlayerTo (server, spawn)
+
+## Permissions
+| feature/command | permission |
+| --- | --- |
+| /papertools | papertools.command.papertools |
 
 ## Commands
--
+
+### papertools
+
+```sh
+/papertools
+```
+
+* get papertools version
+
+
+```sh
+/papertools reload
+```
+
+* reload papertools config

@@ -19,6 +19,10 @@ public class GUI {
 		this.inventory = Bukkit.createInventory(owner, slots, ChatColor.translateAlternateColorCodes('&', name));
 	}
 
+	public static boolean compareItem(ItemStack one, ItemStack two) {
+		return one.getItemMeta().getDisplayName().equals(two.getItemMeta().getDisplayName());
+	}
+
 	public void addItem(String displayname, Material material, int amount, int slot, String... loreList) {
 
 		ItemStack item = new ItemStack(material, amount);

@@ -1,5 +1,25 @@
-main: papertools.App
+main: papertools.main.Papertools
 name: Papertools
 author: wouter173
 version: 0.1
 api-version: 1.13
+commands:
+  papertools:
+    usage: /<command> [reload]
+    description: papertools command
+
+permissions:
+  papertools.*:
+    description: all papertools permissions
+    default: op
+    children:
+
+      papertools.command.*:
+        description: all papertools commands permissions
+        default: op
+        children:
+
+          papertools.command.papertools:
+            description: papertools command permission for reload and version
+            default: op
+

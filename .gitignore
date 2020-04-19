@@ -1,7 +1,8 @@
 Makefile
 .classpath
 .DS_store
-org.eclipse.*
+.settings
 .project
 target/*
 .factoryPath
+.vscode
