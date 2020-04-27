@@ -26,15 +26,15 @@ public class Papertools extends JavaPlugin implements Listener {
 		this.npcManager = new NPCManager(this);
 		this.guiManager = new GuiManager();
 
-
-		NPCsFromConfig.createAll(this, this.npcManager);
-
 		this.getCommand("papertools").setExecutor(new PapertoolsCommand(this));
 		this.getCommand("npc").setExecutor(new NpcCommand(this));
 
 		this.getServer().getPluginManager().registerEvents(new OnJoinEvent(this), this);
 		this.getServer().getPluginManager().registerEvents(new OnQuitEvent(this), this);
 
+		this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+
+		NPCsFromConfig.createAll(this, this.npcManager);
 
 		for (Player player : this.getServer().getOnlinePlayers()) {
 			packetReader.inject(player, this);

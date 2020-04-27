@@ -26,6 +26,5 @@ public class OnJoinEvent implements Listener {
 
 		this.plugin.npcManager.showAll(event.getPlayer());
 		packetReader.inject(event.getPlayer(), this.plugin);
-		event.getPlayer().openInventory(this.plugin.guiManager.getGui("Servers").getInventory());
 	}
 }

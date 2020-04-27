@@ -20,7 +20,7 @@ public class SendPlayerTo {
 		this.plugin = plugin;
 	}
 
-	public static void server(Player player, String server, Plugin plugin) {
+	public void server(Player player, String server, Plugin plugin) {
 		ByteArrayDataOutput out = ByteStreams.newDataOutput();
 		out.writeUTF("Connect");
 		out.writeUTF(server);

@@ -9,7 +9,6 @@
 
 ## TODO
 - [x] npc command: create/delete/info
-- [x] portals
 
 
 ## API

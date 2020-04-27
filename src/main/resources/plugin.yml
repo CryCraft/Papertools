@@ -1,7 +1,7 @@
 main: papertools.main.Papertools
 name: Papertools
 author: wouter173
-version: 2.0
+version: 2.1
 api-version: 1.13
 commands:
   papertools:
