@@ -1,8 +1,5 @@
+/target/*
+/lib/*
+.idea/*
+papertools.iml
 Makefile
-.classpath
-.DS_store
-.settings
-.project
-target/*
-.factoryPath
-.vscode

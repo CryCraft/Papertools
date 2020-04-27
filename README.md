@@ -2,22 +2,37 @@
 
 ## Features
 - [x] disable player join/quit message
-- [x] config reload
-- [x] spawnjoin
+- [x] papertools config reload
+- [x] npcs: config, list, behaviors (packet reader)
+- [x] Guis: items, inventories, intractable
+- [x] spawn join
 
 ## TODO
-- [ ]
+- [x] npc command: create/delete/info
+- [x] portals
+
 
 ## API
 - GUI
-- Utils: SendPlayerTo (server, spawn)
+- Utils: SendPlayerTo (server, spawn), FromConfig(location)
+- NPC: create, delete
+- GuiInventory: items, inventories
 
 ## Permissions
 | feature/command | permission |
 | --- | --- |
 | /papertools | papertools.command.papertools |
+| /npc | papertools.command.npc |
 
 ## Commands
+
+### npc
+
+```sh
+/npc list
+```
+
+* list all active npcs
 
 ### papertools
 

@@ -14,7 +14,7 @@ import papertools.main.Papertools;
 
 
 public class SendPlayerTo {
-	private Papertools plugin;
+	private final Papertools plugin;
 
 	public SendPlayerTo(Papertools plugin) {
 		this.plugin = plugin;
@@ -31,8 +31,8 @@ public class SendPlayerTo {
 		FileConfiguration config = this.plugin.getConfig();
 		World world = Bukkit.getServer().getWorld(config.getString("spawn.world"));
 
-		Float yaw = Float.parseFloat(config.getString("spawn.yaw"));
-		Float pitch = Float.parseFloat(config.getString("spawn.pitch"));
+		float yaw = Float.parseFloat(config.getString("spawn.yaw"));
+		float pitch = Float.parseFloat(config.getString("spawn.pitch"));
 		player.teleport( new Location(world, config.getDouble("spawn.x"), config.getDouble("spawn.y"), config.getDouble("spawn.z"), yaw, pitch));
 	}
 }

@@ -1,12 +1,15 @@
 main: papertools.main.Papertools
 name: Papertools
 author: wouter173
-version: 0.1
+version: 2.0
 api-version: 1.13
 commands:
   papertools:
     usage: /<command> [reload]
     description: papertools command
+  npc:
+    usage: /<command> [list|create|delete]
+    description: link into papertools npc api
 
 permissions:
   papertools.*:
@@ -21,5 +24,9 @@ permissions:
 
           papertools.command.papertools:
             description: papertools command permission for reload and version
+            default: op
+
+          papertools.command.npc:
+            description: papertools command permission for npc
             default: op
 

@@ -6,9 +6,10 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 import net.md_5.bungee.api.ChatColor;
 import papertools.main.Papertools;
+import papertools.main.packetReader;
 
 public class OnQuitEvent implements Listener {
-	private Papertools plugin;
+	private final Papertools plugin;
 
 	public OnQuitEvent(Papertools plugin) {
 		this.plugin = plugin;
@@ -17,6 +18,7 @@ public class OnQuitEvent implements Listener {
 	@EventHandler
 	public void onQuitEvent(PlayerQuitEvent event) {
 		String message = this.plugin.getConfig().getBoolean("quit-message") ? ChatColor.translateAlternateColorCodes('&', "&8[&c-&8] &f{player}") : "";
-		event.setQuitMessage(message.replaceAll("{player}", event.getPlayer().getDisplayName().toString()));
+		event.setQuitMessage(message.replace("{player}", event.getPlayer().getDisplayName()));
+		packetReader.eject(event.getPlayer());
 	}
 }
